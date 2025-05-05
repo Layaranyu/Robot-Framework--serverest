@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.10 on win32)" generated="20250505 16:53:50.984" rpa="false" schemaversion="3">
+<suite id="s1" name="CadastroUsuario" source="c:\Users\lay_n\Desktop\serverestCadastros\Tests\CadastroUsuario.robot">
+<kw name="Abrir Browser" library="hooks" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://google.com.br</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20250505 16:53:51.639" level="INFO">Opening browser 'chrome' to base url 'https://google.com.br'.</msg>
+<status status="PASS" starttime="20250505 16:53:51.639" endtime="20250505 16:53:54.000"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20250505 16:53:57.014" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20250505 16:53:54.000" endtime="20250505 16:53:57.014"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20250505 16:53:57.014" endtime="20250505 16:53:57.047"/>
+</kw>
+<status status="PASS" starttime="20250505 16:53:51.638" endtime="20250505 16:53:57.048"/>
+</kw>
+<test id="s1-t1" name="Cadastro de usuario" line="12">
+<kw name="Gerar cadastro" library="CadastroUsuario_kw" type="SETUP">
+<kw name="Name" library="FakerLibrary">
+<var>${NOMEUSUARIO}</var>
+<doc>:example 'John Doe'</doc>
+<msg timestamp="20250505 16:53:57.050" level="INFO">${NOMEUSUARIO} = Maria Eduarda da Paz</msg>
+<status status="PASS" starttime="20250505 16:53:57.049" endtime="20250505 16:53:57.051"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${NOMEUSUARIO}</arg>
+<arg>${NOMEUSUARIO}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20250505 16:53:57.052" level="INFO">${NOMEUSUARIO} = Maria Eduarda da Paz</msg>
+<status status="PASS" starttime="20250505 16:53:57.051" endtime="20250505 16:53:57.052"/>
+</kw>
+<kw name="Email" library="FakerLibrary">
+<var>${EMAILUSUARIO}</var>
+<msg timestamp="20250505 16:53:57.053" level="INFO">${EMAILUSUARIO} = ycosta@example.net</msg>
+<status status="PASS" starttime="20250505 16:53:57.053" endtime="20250505 16:53:57.053"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${EMAILUSUARIO}</arg>
+<arg>$${EMAILUSUARIO}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20250505 16:53:57.054" level="INFO">${EMAILUSUARIO} = $ycosta@example.net</msg>
+<status status="PASS" starttime="20250505 16:53:57.053" endtime="20250505 16:53:57.054"/>
+</kw>
+<status status="PASS" starttime="20250505 16:53:57.049" endtime="20250505 16:53:57.054"/>
+</kw>
+<kw name="Dado que estou na tela inicial" library="CadastroUsuario_kw">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20250505 16:53:57.055" level="INFO">Opening url 'https://front.serverest.dev/login'</msg>
+<status status="PASS" starttime="20250505 16:53:57.055" endtime="20250505 16:53:58.609"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${VISIBLE_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250505 16:53:58.609" endtime="20250505 16:53:58.631"/>
+</kw>
+<status status="PASS" starttime="20250505 16:53:57.054" endtime="20250505 16:53:58.631"/>
+</kw>
+<kw name="E Clico em 'Cadastre-se'" library="CadastroUsuario_kw">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CADASTRO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250505 16:53:58.632" level="INFO">Clicking element 'xpath=//a[normalize-space()='Cadastre-se']'.</msg>
+<status status="PASS" starttime="20250505 16:53:58.632" endtime="20250505 16:53:58.736"/>
+</kw>
+<status status="PASS" starttime="20250505 16:53:58.631" endtime="20250505 16:53:58.737"/>
+</kw>
+<kw name="Então deve acessar a tela de cadastro e preencher os dados correspondentes" library="CadastroUsuario_kw">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${INPUT_NOME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250505 16:53:58.739" level="INFO">Clicking element 'xpath=//input[@id='nome']'.</msg>
+<status status="PASS" starttime="20250505 16:53:58.738" endtime="20250505 16:53:58.813"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_NOME}</arg>
+<arg>${NOMEUSUARIO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250505 16:53:58.814" level="INFO">Typing text 'Maria Eduarda da Paz' into text field 'xpath=//input[@id='nome']'.</msg>
+<status status="PASS" starttime="20250505 16:53:58.814" endtime="20250505 16:53:58.880"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_EMAIL}</arg>
+<arg>${EMAILUSUARIO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250505 16:53:58.881" level="INFO">Typing text '$ycosta@example.net' into text field 'xpath=//input[@id='email']'.</msg>
+<status status="PASS" starttime="20250505 16:53:58.881" endtime="20250505 16:53:58.954"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_SENHA}</arg>
+<arg>${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250505 16:53:58.956" level="INFO">Typing text '123456' into text field 'xpath=//input[@id='password']'.</msg>
+<status status="PASS" starttime="20250505 16:53:58.955" endtime="20250505 16:53:59.016"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${BUTTON_CADASTRO}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20250505 16:53:59.017" level="INFO">Clicking button 'xpath=//button[normalize-space()='Cadastrar']'.</msg>
+<status status="PASS" starttime="20250505 16:53:59.016" endtime="20250505 16:53:59.076"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${VISIBLE_CADASTROCOMSUCESSO}</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250505 16:53:59.077" endtime="20250505 16:54:00.223"/>
+</kw>
+<status status="PASS" starttime="20250505 16:53:58.737" endtime="20250505 16:54:00.223"/>
+</kw>
+<status status="PASS" starttime="20250505 16:53:57.048" endtime="20250505 16:54:00.224"/>
+</test>
+<kw name="Fechar Browser" library="hooks" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20250505 16:54:00.226" endtime="20250505 16:54:02.434"/>
+</kw>
+<status status="PASS" starttime="20250505 16:54:00.225" endtime="20250505 16:54:02.435"/>
+</kw>
+<doc>Cadastro de usuario</doc>
+<status status="PASS" starttime="20250505 16:53:50.990" endtime="20250505 16:54:02.435"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="CadastroUsuario">CadastroUsuario</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

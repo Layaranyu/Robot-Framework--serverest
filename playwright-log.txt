@@ -1,0 +1,11 @@
+{"level":30,"time":"2025-05-05T18:06:51.535Z","pid":4360,"hostname":"Layara","msg":"Listening on 56032"}
+{"level":30,"time":"2025-05-05T18:06:51.602Z","pid":4360,"hostname":"Layara","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-05-05T18:06:51.603Z","pid":4360,"hostname":"Layara","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-05-05T18:07:00.117Z","pid":4360,"hostname":"Layara","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-05-05T18:07:00.117Z","pid":4360,"hostname":"Layara","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-05-05T18:07:00.122Z","pid":4360,"hostname":"Layara","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-05-05T18:07:00.122Z","pid":4360,"hostname":"Layara","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-05-05T18:07:00.134Z","pid":4360,"hostname":"Layara","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-05-05T18:07:00.134Z","pid":4360,"hostname":"Layara","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-05-05T18:07:02.203Z","pid":4360,"hostname":"Layara","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-05-05T18:07:02.204Z","pid":4360,"hostname":"Layara","msg":"End of node method closeAllBrowsers"}
